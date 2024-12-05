@@ -6,5 +6,3 @@ Learning Objectives:
 - Revise on using React Router to set up routes.
 - Learn/Revise on styling the JSX elements/components.
 - Display the API results dynamically using Components.
-
-API babe2cdb
