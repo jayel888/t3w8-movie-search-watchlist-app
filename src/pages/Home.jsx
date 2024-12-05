@@ -5,13 +5,13 @@ import MovieCard from '../components/MovieCard';
 export default function Home() {
     const [query, setQuery] = useState('');
     const [movies, setMovies] = useState([]);
-    
-    const fetchMovies = async() => {
+
+    const fetchMovies = async () => {
         // using fetch()
         // const response = await fetch(`http://www.omdbapi.com/${apikey}/${query}`);
 
         // Using axios()
-        if (query){
+        if (query) {
             const response = await axios.get(`https://www.omdbapi.com/`, {
                 params: {
                     apikey: 'babe2cdb',
@@ -22,24 +22,29 @@ export default function Home() {
             setMovies(response.data.Search || []);
         }
     }
-    
+
     return (
-        <div>
-            <h1>Movie Search</h1>
-            <input
-            type="text"
-            placeholder="Search for Movies.."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            />
-            <button onClick={fetchMovies}>Search</button>
-            <div>
-                {
-                    movies.map((movie) => (
-                        <MovieCard key={movie.imdbID} movie={movie}/>
-                    ))
-                }
+        <div className="container my-4">
+
+            <h1 className="text-center mb-4">Movie Search</h1>
+            <div className="row">
+                <div className="col-md-8 offset-md-2">
+                <input
+                    type="text"
+                    placeholder="Search for Movies.."
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                />
+                <button className='btn btn-primary btn-block mt-2' onClick={fetchMovies}>Search</button>
+                <div className='row mt-4'>
+                    {
+                        movies.map((movie) => (
+                            <MovieCard key={movie.imdbID} movie={movie} />
+                        ))
+                    }
+                </div>
             </div>
+        </div>
         </div>
     )
 }
