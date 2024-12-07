@@ -21,3 +21,5 @@ Phase 3 (Saturday):
 - Added "Go Back" navigation
 - Disable "Add to Watchlist" after adding
 - Work on Notification Context, Component
+
+Note: Make sure you create a .env in the root directory and provide your unique API key
