@@ -18,7 +18,7 @@ const Watchlist = () => {
                     {watchlist.map((movie) => (
                         <li key={movie.imdbID}>
                             <p><strong>{movie.Title}</strong> ({movie.Year}) </p>
-                            <img src={movie.Poster} alt={`${movie.Title} Poster`} style={{ maxWidth: '16rem' }} />
+                            <img src={movie.Poster} alt={`${movie.Title} Poster`} style={{ maxWidth: '20rem' }} />
                             <button
                                 onClick={() => removeFromWatchlist(movie.imdbID)}
                                 style={{ color: 'red' }}
