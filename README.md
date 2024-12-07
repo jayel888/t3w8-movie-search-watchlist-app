@@ -20,3 +20,4 @@ Phase 3 (Saturday):
 - Added the Details Page for each movie
 - Added "Go Back" navigation
 - Disable "Add to Watchlist" after adding
+- Work on Notification Context, Component
